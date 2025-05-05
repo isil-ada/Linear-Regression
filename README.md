@@ -80,7 +80,7 @@ Bu nedenle:
 
 * **Gerçek dünya uygulamaları** için NumPy tabanlı model tercih edilmelidir.
 * **Eğitsel veya akademik amaçlar** için manuel model faydalı bir alternatiftir.
-* 
+  
 ---
 
 ## 📷 Görselleştirmeler
@@ -113,19 +113,14 @@ Aşağıda her iki modelin çıktılarından elde edilen tahmin vs. gerçek değ
 
 ---
 
-Tabii! Aşağıda yalnızca **"📝 Sonuç"** kısmını daha uzun ve açıklayıcı hale getirilmiş versiyonuyla bulabilirsin. İçeriği değiştirmeden, sadece daha detaylı ve kapsamlı yazdım:
-
----
-
 ## 📝 Sonuç
 
-Bu çalışma, doğrusal regresyon modellemesinin hem hazır bilimsel kütüphaneler (NumPy gibi) aracılığıyla, hem de temel matris işlemlerinin manuel olarak programlanması yoluyla nasıl uygulanabileceğini kapsamlı şekilde ortaya koymaktadır. Her iki yaklaşım da, aynı veri kümesi üzerinde benzer tahmin doğruluğu ve aynı maliyet (cost) değerini üretmiştir. Bu da kullanılan matematiksel yöntemin tutarlılığını ve iki farklı teknikle de güvenle uygulanabileceğini göstermektedir.
+Bu çalışma, doğrusal regresyon modelinin hem hazır bilimsel kütüphanelerle (NumPy) hem de manuel matris işlemleriyle nasıl uygulanabileceğini göstermektedir. Her iki model de aynı tahmin sonuçlarını ve maliyet (cost) değerlerini üretmiş, böylece matematiksel yöntemin doğruluğu ve tutarlılığı doğrulanmıştır.
 
-İlk model olan **Model 1**, NumPy gibi güçlü bilimsel kütüphaneleri kullanması sayesinde daha kısa sürede uygulanabilir, kod okunabilirliği yüksektir ve büyük veri setlerinde yüksek performans sağlar. Bu yönüyle, özellikle üretim ortamlarında veya prototip geliştirme süreçlerinde tercih edilebilecek pratik bir çözümdür.
+NumPy kullanan Model 1, yüksek performans ve sade kod yapısıyla özellikle pratik uygulamalarda avantaj sağlarken; manuel hesaplama yapan Model 2, algoritmanın temelini öğrenmek ve dış kütüphane olmadan işlem yapmak isteyenler için idealdir.
 
-İkinci model olan **Model 2** ise, matris transpoz alma, çarpma ve ters alma gibi işlemleri sıfırdan tanımlayan fonksiyonlar içermesi nedeniyle daha detaylı bir yapıya sahiptir. Bu yöntem, doğrusal regresyonun temel matematiksel süreçlerinin daha iyi anlaşılmasını sağlar. Eğitim ve öğrenim amaçlı çalışmalarda oldukça değerlidir. Ayrıca, herhangi bir kütüphane bağımlılığı olmadan çalıştığı için belirli sistem kısıtlamalarının bulunduğu ortamlarda da avantaj sağlar.
+Sonuç olarak, her iki model de doğrusal regresyon problemini başarıyla çözmektedir. Tercih, kullanım amacına ve ortam koşullarına göre belirlenmelidir.
 
-Sonuç olarak; her iki model de doğruluğu yüksek tahminler üretmekte başarılıdır. Aralarındaki farklar daha çok uygulama biçimi, esneklik ve geliştirici açısından tercih kolaylığıyla ilgilidir. Hangisinin kullanılacağı, projenin ihtiyaçlarına, ortamın kısıtlarına ve geliştiricinin hedeflerine göre belirlenmelidir.
 
 
 
