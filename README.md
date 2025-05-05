@@ -42,15 +42,52 @@ Her iki modelde elde edilen `theta` (ağırlık) değerleri ve tahmin edilen `y_
 
 ---
 
-## 📉 Maliyet (Cost) Fonksiyonu Karşılaştırması
+Tabii! Aşağıda, **README** dosyasındaki “Cost (maliyet) karşılaştırması” ve “Farklılıkların yorumlanması” kısmını daha detaylı, teknik açıdan zengin ve açıklayıcı hale getirilmiş şekilde düzenledim:
 
-Her iki modelde de Mean Squared Error (MSE) değeri aşağıdaki şekilde hesaplanabilir:
+---
+
+## 💰 Maliyet (Cost) Karşılaştırması
+
+Modellerin başarımı, doğrusal regresyonda sıkça kullanılan **Ortalama Kare Hatası (Mean Squared Error - MSE)** metriği ile değerlendirilmiştir:
 
 $$
-\text{Cost} = \frac{1}{n} \sum (y_{\text{gerçek}} - y_{\text{tahmin}})^2
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(y_{\text{gerçek}}^{(i)} - y_{\text{tahmin}}^{(i)})^2
 $$
 
-Her iki modelde de MSE değeri birebir aynı çıkmaktadır. Bu, performans açısından modellerin eşit olduğunu; farkın yalnızca uygulama yöntemi ve esneklikte olduğunu göstermektedir.
+* **Model 1** (NumPy ile hesaplanan):
+  NumPy’nin optimize edilmiş lineer cebir fonksiyonları (`np.linalg.inv`, `@`) kullanılarak `θ` parametreleri hızlı ve doğru biçimde hesaplanmıştır. Elde edilen `y_pred` (tahmin edilen satışlar), gerçek `y` değerleriyle karşılaştırılmış ve düşük bir MSE değeri elde edilmiştir.
+
+* **Model 2** (manuel matris işlemleriyle):
+  Transpoz alma, matris çarpımı ve ters alma gibi işlemler hiçbir hazır matematiksel kütüphane kullanılmadan elle kodlanmıştır. Bu yaklaşımda `y_pred` hesaplanırken yalnızca Python listeleri kullanılmıştır. Sonuç olarak aynı tahmin değerleri ve **birebir aynı** MSE değeri elde edilmiştir.
+
+> ✅ Her iki modelde de `y_pred` vektörü aynı olduğu için, **maliyet fonksiyonu değeri eşittir**.
+> Bu durum, manuel implementasyonun matematiksel olarak doğru çalıştığını ve teorik formülü doğru şekilde takip ettiğini göstermektedir.
+
+---
+
+### 🧠 Modeller Arası Yorum ve Farklılıkların Değerlendirilmesi
+
+Maliyet açısından aynı sonucun elde edilmesine rağmen, iki model arasında önemli farklar bulunmaktadır:
+
+| Kriter                  | Model 1 (NumPy)                        | Model 2 (Manuel Python)                             |
+| ----------------------- | -------------------------------------- | --------------------------------------------------- |
+| **Kütüphane Kullanımı** | NumPy, Pandas, Matplotlib              | Sadece Python yerleşik veri yapıları                |
+| **Performans**          | Optimize edilmiştir, çok hızlı çalışır | Büyük veri için verimsiz, sadece eğitim amaçlı      |
+| **Okunabilirlik**       | Kod kısa, net ve anlaşılır             | Kod daha uzun ve karmaşık                           |
+| **Eğitimsel Katkı**     | Temel kullanım sağlar                  | Matris hesaplarını daha iyi kavramaya yardımcı olur |
+| **Esneklik**            | NumPy gerektirir                       | Hiçbir dış kütüphaneye ihtiyaç duymaz               |
+
+**Yorum:**
+Her iki model, aynı doğrusal regresyon denklemine dayansa da, uygulama yaklaşımları farklıdır. NumPy tabanlı yöntem, endüstride yaygın olarak kullanılan, yüksek performanslı ve güvenilir bir yaklaşımdır. Öte yandan, manuel olarak yazılmış matris işlemleri modeli, algoritmanın mantığını derinlemesine anlamak isteyenler için büyük bir eğitim değerine sahiptir. Ancak büyük veri setlerinde kullanılabilirliği sınırlıdır ve hata yapma riski daha yüksektir.
+
+Bu nedenle:
+
+* **Gerçek dünya uygulamaları** için NumPy tabanlı model tercih edilmelidir.
+* **Eğitsel veya akademik amaçlar** için manuel model faydalı bir alternatiftir.
+
+---
+
+Bu güncellenmiş hali `README.md` içerisine doğrudan yerleştirilebilir. İstersen tam README’nin bu güncel haliyle birleştirilmiş versiyonunu da sana hazırlayayım mı?
 
 ---
 
