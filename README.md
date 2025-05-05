@@ -42,10 +42,6 @@ Her iki modelde elde edilen `theta` (ağırlık) değerleri ve tahmin edilen `y_
 
 ---
 
-Tabii! Aşağıda, **README** dosyasındaki “Cost (maliyet) karşılaştırması” ve “Farklılıkların yorumlanması” kısmını daha detaylı, teknik açıdan zengin ve açıklayıcı hale getirilmiş şekilde düzenledim:
-
----
-
 ## 💰 Maliyet (Cost) Karşılaştırması
 
 Modellerin başarımı, doğrusal regresyonda sıkça kullanılan **Ortalama Kare Hatası (Mean Squared Error - MSE)** metriği ile değerlendirilmiştir:
@@ -84,11 +80,7 @@ Bu nedenle:
 
 * **Gerçek dünya uygulamaları** için NumPy tabanlı model tercih edilmelidir.
 * **Eğitsel veya akademik amaçlar** için manuel model faydalı bir alternatiftir.
-
----
-
-Bu güncellenmiş hali `README.md` içerisine doğrudan yerleştirilebilir. İstersen tam README’nin bu güncel haliyle birleştirilmiş versiyonunu da sana hazırlayayım mı?
-
+* 
 ---
 
 ## 📷 Görselleştirmeler
@@ -121,11 +113,19 @@ Aşağıda her iki modelin çıktılarından elde edilen tahmin vs. gerçek değ
 
 ---
 
+Tabii! Aşağıda yalnızca **"📝 Sonuç"** kısmını daha uzun ve açıklayıcı hale getirilmiş versiyonuyla bulabilirsin. İçeriği değiştirmeden, sadece daha detaylı ve kapsamlı yazdım:
+
+---
+
 ## 📝 Sonuç
 
-Bu çalışma, doğrusal regresyonun hem kütüphane tabanlı hem de manuel yöntemle nasıl gerçekleştirilebileceğini göstermektedir. Her iki yaklaşım da benzer doğruluk ve maliyet değerleri verirken, uygulama yöntemleri açısından farklılık göstermektedir:
+Bu çalışma, doğrusal regresyon modellemesinin hem hazır bilimsel kütüphaneler (NumPy gibi) aracılığıyla, hem de temel matris işlemlerinin manuel olarak programlanması yoluyla nasıl uygulanabileceğini kapsamlı şekilde ortaya koymaktadır. Her iki yaklaşım da, aynı veri kümesi üzerinde benzer tahmin doğruluğu ve aynı maliyet (cost) değerini üretmiştir. Bu da kullanılan matematiksel yöntemin tutarlılığını ve iki farklı teknikle de güvenle uygulanabileceğini göstermektedir.
 
-* **Model 1**, hızlı geliştirme ve yüksek performans açısından avantajlıdır.
-* **Model 2**, matematiksel temelin pekiştirilmesi ve bağımsız çalışabilme açısından değerlidir.
+İlk model olan **Model 1**, NumPy gibi güçlü bilimsel kütüphaneleri kullanması sayesinde daha kısa sürede uygulanabilir, kod okunabilirliği yüksektir ve büyük veri setlerinde yüksek performans sağlar. Bu yönüyle, özellikle üretim ortamlarında veya prototip geliştirme süreçlerinde tercih edilebilecek pratik bir çözümdür.
+
+İkinci model olan **Model 2** ise, matris transpoz alma, çarpma ve ters alma gibi işlemleri sıfırdan tanımlayan fonksiyonlar içermesi nedeniyle daha detaylı bir yapıya sahiptir. Bu yöntem, doğrusal regresyonun temel matematiksel süreçlerinin daha iyi anlaşılmasını sağlar. Eğitim ve öğrenim amaçlı çalışmalarda oldukça değerlidir. Ayrıca, herhangi bir kütüphane bağımlılığı olmadan çalıştığı için belirli sistem kısıtlamalarının bulunduğu ortamlarda da avantaj sağlar.
+
+Sonuç olarak; her iki model de doğruluğu yüksek tahminler üretmekte başarılıdır. Aralarındaki farklar daha çok uygulama biçimi, esneklik ve geliştirici açısından tercih kolaylığıyla ilgilidir. Hangisinin kullanılacağı, projenin ihtiyaçlarına, ortamın kısıtlarına ve geliştiricinin hedeflerine göre belirlenmelidir.
+
 
 
