@@ -59,14 +59,15 @@ Her iki modelde de MSE değeri birebir aynı çıkmaktadır. Bu, performans aç�
 Aşağıda her iki modelin çıktılarından elde edilen tahmin vs. gerçek değer karşılaştırmalarına ilişkin grafikler bulunmaktadır.
 
 ### Model 1 (NumPy):
+### TV Reklam Harcaması vs. Satış
 ![Figure_1](https://github.com/user-attachments/assets/00bdbea5-d85f-4698-b33d-f1b925d647bd) 
-###TV Reklam Harcaması vs. Satış
 
+### Radio Reklam Harcaması vs. Satış
 ![Figure_2](https://github.com/user-attachments/assets/f4f2e95d-6f26-4227-8fc3-5e228bbfcd83)
-###  Radio Reklam Harcaması vs. Satış
 
+### Newspaper Reklam Harcaması vs. Satış
 ![Figure_3](https://github.com/user-attachments/assets/187be424-4852-413c-a1b6-84d158ff8c41)
-  Newspaper Reklam Harcaması vs. Satış
+
 
 ### Model 2 (Manuel):
 
