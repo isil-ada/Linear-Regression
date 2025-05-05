@@ -109,15 +109,14 @@ Aşağıda her iki modelin çıktılarından elde edilen tahmin vs. gerçek değ
 #### Newspaper Reklam Harcaması vs. Satış
 ![Figure_6](https://github.com/user-attachments/assets/03be4412-6459-416b-9c7c-6a991fda1b0c)
 
-*Not: Görseller yukarıdaki grafiklerle birebir aynı çıktılar vermektedir.*
-
 ---
 
 ## 📝 Sonuç
 
 Bu çalışma, doğrusal regresyon modelinin hem hazır bilimsel kütüphanelerle (NumPy) hem de manuel matris işlemleriyle nasıl uygulanabileceğini göstermektedir. Her iki model de aynı tahmin sonuçlarını ve maliyet (cost) değerlerini üretmiş, böylece matematiksel yöntemin doğruluğu ve tutarlılığı doğrulanmıştır.
 
-NumPy kullanan Model 1, yüksek performans ve sade kod yapısıyla özellikle pratik uygulamalarda avantaj sağlarken; manuel hesaplama yapan Model 2, algoritmanın temelini öğrenmek ve dış kütüphane olmadan işlem yapmak isteyenler için idealdir.
+* NumPy kullanan Model 1, yüksek performans ve sade kod yapısıyla özellikle pratik uygulamalarda avantajlıdır.
+* Manuel hesaplama yapan Model 2, algoritmanın temelini öğrenmek ve dış kütüphane olmadan işlem yapmak isteyenler için idealdir.
 
 Sonuç olarak, her iki model de doğrusal regresyon problemini başarıyla çözmektedir. Tercih, kullanım amacına ve ortam koşullarına göre belirlenmelidir.
 
